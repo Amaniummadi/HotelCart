@@ -10,7 +10,7 @@ export function Counter({handleIncrement,handleDecrement,count,isEnabled}) {
   return (
     <div>
       <div className={styles.row}>
-        <button
+        <button style={{backgroundColor:"#03254c",color:"white"}}
           className={styles.button}
           aria-label="Increment value"
           onClick={handleIncrement}
@@ -18,7 +18,7 @@ export function Counter({handleIncrement,handleDecrement,count,isEnabled}) {
           +
         </button>
         <span className={styles.value}>{count}</span>
-        <button disabled={!isEnabled}
+        <button disabled={!isEnabled}  style={{backgroundColor:"#ff6961",color:'white'}}
           className={styles.button}
           aria-label="Decrement value"
           onClick={handleDecrement}

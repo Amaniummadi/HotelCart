@@ -1,5 +1,5 @@
-import React,{useState} from "react";
-
+import React from "react";
+import './App.css'
 import { Counter } from "./features/counter/Counter";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -40,9 +40,9 @@ function PeopleRooms() {
     <div className="PeopleRooms">
     
     
-<h1 className="font-bold text-xl ">Choose number of people</h1>
+<h1 className="font-medium text-xl head"><i className="fas fa-users"></i> Choose number of <strong> people</strong></h1>
       <div className="grid grid-cols-3 gap-4 border p-1 m-3">
-        <div className="col-span-2 ">Rooms</div>
+        <div className="col-span-2 sub-head head"> <i className="fas fa-bed"></i> Rooms</div>
         <div className="col-span-1 ">
           <Counter
             handleIncrement={() => {
@@ -55,7 +55,7 @@ function PeopleRooms() {
           />
         </div>
         <div className="col-span-3 "><hr></hr></div>
-        <div className="col-span-2 ">adults</div>
+        <div className="col-span-2 sub-head head"><i className="fas fa-user-alt"></i> adults</div>
         <div className="col-span-1 ">
         <Counter
         handleIncrement={() => dispatch(increment())}
@@ -65,7 +65,7 @@ function PeopleRooms() {
       />
         </div>
         <div className="col-span-3 "><hr></hr></div>
-        <div className="col-span-2 ">children</div>
+        <div className="col-span-2 sub-head head"><i className="fas fa-female"></i> children</div>
         <div className="col-span-1 ">
           <Counter
             handleIncrement={() => dispatch(incrementchildrens())}

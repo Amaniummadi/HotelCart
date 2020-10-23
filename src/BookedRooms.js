@@ -1,14 +1,19 @@
 import React from 'react'
+import './App.css'
+
 
 const BookedRooms = ({room,children,count}) => {
     return (
-      <table>
+      <table className="">
+            <thead>
           <tr>
               <th>Rooms</th>
               <th>childrens</th>
               <th>auldts</th>
 
           </tr>
+          </thead>
+          <tbody>
           <tr>
               <td>
                   {room}
@@ -20,6 +25,7 @@ const BookedRooms = ({room,children,count}) => {
                   {count}
               </td>
           </tr>
+          </tbody>
       </table>
     )
 }
